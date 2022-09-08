@@ -13,10 +13,15 @@
 
   <div>
     <h1>My favourite websites</h1>
-      <ul>
-        <li><a href="http://railsgirls.com">Rails Girls</a></li>
-        <li><a href="https://en.wikibooks.org/wiki/Ruby_Programming">Wikibooks</a></li>
-        <li><a href="http://guides.rubyonrails.org">Ruby on Rails Guides</a></li>
-      </ul>
+      <%
+  @websites = [
+    ["http://railsgirls.com", "Rails Girls"],
+    ["https://en.wikibooks.org/wiki/Ruby_Programming", "Wikibooks"],
+    ["http://guides.rubyonrails.org", "Ruby on Rails Guides"],
+  ]
+%>
+<% for url, name in @websites %>
+  <li><a href="<%= url %>"><%= name %></a></li>
+<% end %>
     </div>
     <img src="http://railsgirls.com/images/rg-warsaw.png" />
