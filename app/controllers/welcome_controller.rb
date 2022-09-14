@@ -6,6 +6,5 @@ class WelcomeController < ApplicationController
       ["http://guides.rubyonrails.org", "Ruby on Rails Guides"],
     ]
 
-    @entries = Entry.all.sort_by{|entry| entry.date}
   end
 end

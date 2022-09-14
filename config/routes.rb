@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   resources "entries"
 
+  #get "/entries/:test", to: "entries#show"
+
 end
